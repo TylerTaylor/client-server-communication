@@ -29,10 +29,6 @@
   justify-content: space-between;
 }
 
-/* .navbar li {
-  margin
-} */
-
 .navbar a {
   text-decoration: none;
   color: var(--gunmetal);
@@ -40,7 +36,7 @@
 
 .container {
   /* border: 1px solid hotpink; */
-  background-color: var(--tearose);
+  /* background-color: var(--tearose); */
   /* height: 50vh; */
   /* width: 60%; */
   margin: 50px auto;
@@ -81,6 +77,10 @@
 a {
   text-decoration: none;
   color: white;
+}
+
+.pink {
+  color: var(--tearose);
 }
 
 .service-detail {
