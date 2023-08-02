@@ -13,7 +13,9 @@ function ServiceDetail({ handleEdit, deleteService }) {
 
     // TODO CHALLENGE 1 - GET one service by id and set our state
     useEffect(() => {
-
+        fetch(`http://127.0.0.1:5555/services/${id}`)
+            .then(res => res.json())
+            .then(service => setService(service))
     }, [])
 
     // 5. Wire up our delete function
@@ -25,13 +27,19 @@ function ServiceDetail({ handleEdit, deleteService }) {
     // 6 - go to ServiceForm.js
 
     const handleDelete = (service) => {
-
+        fetch(`http://127.0.0.1:5555/services/${id}`, {
+            method: "DELETE"
+        })
+        .then(() => {
+            deleteService(service)
+            navigate('/services')
+        })
     }
 
     return (
         <div className="service-detail">
             <h2>{name}</h2>
-            <p>{price}</p>
+            <p>${price}</p>
 
             <div className="service-buttons">
                 <button onClick={() => handleEdit(service)}>Edit</button>

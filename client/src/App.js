@@ -20,6 +20,11 @@ function App() {
 
   // 3. GET services on initial load
     // 3.1 Set services in state
+  useEffect(() => {
+    fetch('http://localhost:5555/services')
+      .then(res => res.json())
+      .then(services => setServices(services))
+  }, [])
 
   // 4 - move to ServiceDetail.js
 

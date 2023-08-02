@@ -6,7 +6,7 @@ function ServiceCard({ name, price, id }) {
       <Link to={`/services/${id}`}>
         <div>
           <h2>{name}</h2>
-          <p>${price}</p>
+          <p className="pink">${price}</p>
         </div>
       </Link>
     </div>

@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
 # Review:
-    # REST
-    # Status Codes
-    # Error Handling
+    # CORS
 
 # Set Up:
     # Run in terminal:
@@ -16,6 +14,10 @@
         # python seed.py
 
     # Double check the database to verify the migration worked as expected
+
+    # To run both apps together:
+        # In one terminal tab/window, run `flask run --debug`
+        # Then in another tab/window, cd into `client`, `npm install` (on first run), then `npm start`
     
 
 # RESTful routing examples
@@ -43,6 +45,8 @@ from models import db, Service, Show
 app = Flask(__name__)
 
 # 1. Import CORS from flask_cors, invoke it with `app` as an argument
+from flask_cors import CORS
+CORS(app)
 
 # 2. Start up the server and client then navigate to client/src/App.js
 
